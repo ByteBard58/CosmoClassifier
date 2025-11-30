@@ -72,7 +72,7 @@ Previously, multiple combinations of models and dimensionality-reduction methods
 | **Macro Avg**   | 0.98      | 0.98   | 0.98     | 20000   |
 | **Weighted Avg**| 0.99      | 0.99   | 0.99     | 20000   |
 
-You can find the code for this in [research.ipynb](https://github.com/ByteBard58/The_CosmoClassifier/blob/main/research.ipynb) file included in the repo. Note that this result is for the full dataset with all original features.
+You can find the code for this in [research.py](https://github.com/ByteBard58/The_CosmoClassifier/blob/main/research.py) file included in the repo. Note that this result is for the full dataset with all original features.
 
 ---
 
@@ -84,11 +84,9 @@ THE_COSMOCLASSIFIER/
 ├── models/
 │   ├── column_names.pkl     # List of column names used in the model
 │   └── pipe.pkl             # Serialized machine learning pipeline (model)
-├── notebooks/
-│   ├── research_2.ipynb     # Research notebook used later for implementing feature reduction 
-│   ├── research_LR.ipynb    # Research notebook for Logistic Regression
-│   ├── research_RF.ipynb    # Research notebook for Random Forest
-│   └── research_SVC.ipynb   # Research notebook for Support Vector Classifier
+├── reports/
+│   ├── research.html        # Static HTML report of the research notebook
+│   └── research_2.html      # Static HTML report of the research_2 notebook
 ├── static/                  # Static assets for the web application
 │   ├── script.js            # Frontend JavaScript logic
 │   └── style.css            # Frontend CSS styling
@@ -99,6 +97,8 @@ THE_COSMOCLASSIFIER/
 ├── app.py                   # Main Flask application file for the web service
 ├── fit.py                   # Script for training and saving the machine learning model
 ├── LICENSE                  # Licensing information
+├── research.py              # Marimo notebook for initial research
+├── research_2.py            # Marimo notebook for feature reduction research
 └── requirements.txt         # Python package dependencies
 ```
 ---
@@ -117,9 +117,19 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
-Then open your browser at [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
-If the serialized model isn’t found, app.py automatically trains and saves a new one using fit.py.
+### 4️⃣ Run Marimo Notebooks
+To explore the research notebooks interactively:
+```bash
+marimo edit research.py
+# OR
+marimo edit research_2.py
+```
+This command will open the notebook in your default browser. You can then run the cells interactively.
+
+If you just want to see the static notebook with the output of each cell, you can find them in the `reports` directory.
+
+To learn more about Marimo, visit their [official website](https://marimo.io/).
 
 ---
 
