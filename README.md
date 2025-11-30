@@ -118,7 +118,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-### 4️⃣ Run Marimo Notebooks
+### 4️⃣ Run Marimo Notebooks (Optional)
 To explore the research notebooks interactively:
 ```bash
 marimo edit research.py
