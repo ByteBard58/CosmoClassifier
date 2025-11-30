@@ -1,5 +1,4 @@
-from sklearn.ensemble import RandomForestClassifier,VotingClassifier
-from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.base import BaseEstimator
 from xgboost import XGBClassifier
@@ -7,7 +6,7 @@ from xgboost import XGBClassifier
 from sklearn.decomposition import PCA
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 
-from sklearn.model_selection import train_test_split,learning_curve,RandomizedSearchCV
+from sklearn.model_selection import train_test_split,RandomizedSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import classification_report
